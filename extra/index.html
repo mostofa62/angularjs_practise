@@ -1,0 +1,90 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script src="../angular.min.js"></script>
+<title>Angular Basic Test</title>
+</head>
+
+<body>
+<!--<div ng-app ng-init="quantity=10;cost=5">
+<p>Total in dollar: <span ng-bind="quantity * cost"></span></p>
+</div>
+
+<div ng-app ng-init="firstname='Golam';lastname='Mostofa'">
+<p>Name is {{ firstname + " " + lastname }}</p>
+<span ng-bind="firstname + ' '+lastname "></span>
+</div>
+
+
+<div ng-app ng-init="person={firstname:'Golam',lastname:'Mostofa'}">
+<p>Name is {{ person.firstname + " " + person.lastname }}</p>
+<span ng-bind="person.firstname + ' '+person.lastname "></span>
+</div>
+
+<div ng-app ng-init="person=['Mostofa','Bashar','Shakil']">
+<p>Name is {{ person[0] + " " + person[2] }}</p>
+<span ng-bind="person[1] + ' '+person[2] "></span>
+<ul>
+<li ng-repeat="p in person">
+{{ p }}
+</li>
+</ul>
+</div>
+
+<div ng-app="" ng-init="info=[{ name:'Mostofa',country:'USA' },{name:'Sohel',country:'CANADA'},{name:'Shakil',country:'AFRICA'}]">
+<ul>
+<li ng-repeat="i in info" >
+{{"Person:"+i.name+" ,Country:"+i.country}}
+</li>
+</ul>
+</div>
+
+
+<div ng-app="" ng-init="firstname='John Doe'">
+<input type="text" ng-model="firstname">
+<h1>{{firstname}}</h1>
+<p ng-bind="firstname"></p>
+</div>
+
+
+<div ng-app="" ng-controller="personController">
+First Name <input type="text" ng-model="firstname">
+Last Name <input type="text" ng-model="lastname">
+<br/>
+Full Name : {{fullname()}}
+</div>
+<script>
+function personController($scope)
+{
+$scope.firstname="Golam";
+$scope.lastname="Mostofa";
+$scope.fullname=function()
+{
+return $scope.firstname+" "+$scope.lastname;
+}
+}
+</script>
+-->
+
+<div ng-app="" ng-controller="personController">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{fullName()}}
+
+</div>
+
+<script>
+function personController($scope) {
+    $scope.firstName = "John",
+    $scope.lastName = "Doe",
+    $scope.fullName = function() {
+        return $scope.firstName + " " + $scope.lastName;
+    }
+}
+</script>
+
+</body>
+</html>
